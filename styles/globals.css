@@ -2,6 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Frank Ruhl Libre';
+  src: url('/fonts/FrankRuhlLibre-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+}
+
+html,body {
+  font-family: 'Frank Ruhl Libre', sans-serif;
+  font-size: 15px;
+}
+
+h1 {
+  font-weight: 900; /* Bold */
+}
+
+p {
+  font-weight: 300; /* Light */
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -14,11 +33,7 @@
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}
+
 
 @layer utilities {
   .text-balance {
