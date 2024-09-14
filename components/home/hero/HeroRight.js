@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const HeroRight = ({ data }) => {
     return (
-        <div className="w-3/12">
+        <div className="lg:w-3/12 w-full">
             {
                 data.map((item, index) => (
                     <div key={index}>

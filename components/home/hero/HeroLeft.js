@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const HeroLeft = ({ data }) => {
     return (
-        <div className="w-3/12 mb-5">
+        <div className="lg:w-3/12 w-full mb-5">
             <div className="flex flex-col gap-y-5">
                 {
                     data.map((item, index) => (

@@ -9,7 +9,7 @@ const Hero = ({ data }) => {
 
     return (
         <Container>
-            <div className="flex gap-4 mt-5">
+            <div className="flex flex-col lg:flex-row gap-4 mt-5">
                 <HeroLeft
                     data={data.slice(2, 4)}
                 />

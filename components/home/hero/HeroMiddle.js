@@ -5,7 +5,7 @@ const HeroMiddle = ({ data }) => {
     const firstItem = data[0];
     const secondItem = data[1];
     return (
-        <div className="flex-1 px-4">
+        <div className="lg:flex-1 px-4">
             <div className="flex flex-col gap-y-4">
                 <Link href={`/blog/${firstItem.slug}`} className="flex flex-col gap-y-4">
                     <ImageContainer
