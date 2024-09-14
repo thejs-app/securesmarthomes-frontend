@@ -1,7 +1,6 @@
 import ImageContainer from "@/layouts/ImageContainer";
 
 const VideoList = ({ videos, currentVideo, setCurrentVideo }) => {
-    console.log(videos);
     return (
         <div className='w-4/12'>
             <div className="flex flex-col gap-y-5 w-full scrollbar-w-1 scrollbar scrollbar-thumb-SoftYellow scrollbar-track-transparent max-h-[700px] overflow-y-scroll">

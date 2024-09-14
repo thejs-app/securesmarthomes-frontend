@@ -17,7 +17,7 @@ export default function index({ heroList, beltImage, latestBlog, videos }) {
   );
 }
 
-export async function getServerSideProps() {
+export async function getServerSideProps(context) {
   try {
     const { list } = await api.get('blog:getAll?filter.hero=true&populate=image,category&option.limit=8');
     const { list: belt } = await api.get('belt:getAll?option.limit=1&populate=image');
@@ -25,6 +25,12 @@ export async function getServerSideProps() {
     const { list: choiceProduct } = await api.get('product:getAll?filter.choice=true&populate=image,category&option.limit=8');
     const { list: choiceBlog } = await api.get('blog:getAll?filter.choice=true&populate=image&option.limit=3');
     const { list: videos } = await api.get('video:getAll?populate=image,category&option.limit=8');
+
+    context.res.setHeader(
+      'Cache-Control',
+      'public, s-maxage=10, stale-while-revalidate=59'
+    );
+
     if (list) {
       return {
         props: {
