@@ -2,6 +2,7 @@ import api from "@/helpers/api";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import ImageContainer from "../ImageContainer";
 
 const imagePath = process.env.IMAGE_PATH;
 
@@ -31,15 +32,9 @@ const [blogs, setBlogs] = useState([]);
                     <div className="font-bold px-2">Blogs</div>
                     <div className="flex flex-wrap ">
                         {blogs.map((blog, index) => (
-                            <Link key={index} href={`/blog/${blog.slug}`} className="flex flex-col items-center gap-y-2 basis-1/4 px-2">
+                            <Link key={index} href={`/category/${blog.slug}`} className="flex flex-col items-center gap-y-2 basis-1/4 px-2">
                                 <div className="w-full max-w-[400px] h-[250px] relative overflow-hidden group">
-                                    <Image
-                                        src={`${imagePath}/${blog.image.name}`}
-                                        layout="fill"
-                                        objectFit="cover"  // Görsel kutuya sığacak şekilde ayarlanır, taşma olmaz
-                                        alt={blog.name}
-                                        className="transition-transform duration-700 ease-in-out group-hover:scale-105 transform-origin-center"
-                                    />
+                                    <ImageContainer image={blog.image} height={250} />
                                 </div>
                                 <div className="text-start w-full">{blog.name}</div>
                             </Link>

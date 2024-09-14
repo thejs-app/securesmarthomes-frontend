@@ -38,6 +38,7 @@ const Trending = () => {
                             alt="Trending"
                             width={12}
                             height={12}
+                            className="w-auto h-auto"
                         />
                         <span className="text-[14px] text-DarkGray font-bold">TRENDING</span>
                     </div>

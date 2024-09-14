@@ -40,3 +40,30 @@ p {
     text-wrap: balance;
   }
 }
+
+
+
+
+
+.swiper-pagination {
+  bottom: 0;
+}
+
+.swiper-pagination .swiper-pagination-bullet {
+  width: 6px !important;
+  height: 6px !important;
+  background: #BFC2C9;
+  margin-right: 14px;
+  border-radius: 100% !important;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.swiper-pagination .swiper-pagination-bullet-active {
+  width: 6px !important;
+  height: 6px !important;
+
+  border-radius: 100% !important;
+  background: #FEE198;
+}
+
