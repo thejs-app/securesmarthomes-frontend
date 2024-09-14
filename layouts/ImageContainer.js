@@ -13,7 +13,6 @@ const ImageContainer = ({ image, height, width, video, selectedVideo, recentVide
                 width={width ? width : 1000}
                 height={height}
                 style={{ width: width ? width : "100%", height }}
-                priority
                 quality={100}
             />
             {
