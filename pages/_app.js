@@ -3,7 +3,7 @@ import Script from "next/script";
 
 export default function App({ Component, pageProps }) {
   return <main>
-    <Script src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID" />
+    <Script src="https://www.googletagmanager.com/gtag/js?id=G-EWKP48CM6E" />
     <Script id="google-analytics">
       {`
           window.dataLayer = window.dataLayer || [];
