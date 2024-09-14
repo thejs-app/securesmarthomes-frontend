@@ -12,6 +12,7 @@ const HeroMiddle = ({ data }) => {
                         image={firstItem.image}
                         width={585}
                         height={472}
+                        priority
                     />
                 </Link>
                 <div className="flex flex-col gap-y-1.5">

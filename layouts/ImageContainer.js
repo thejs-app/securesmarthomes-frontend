@@ -2,7 +2,7 @@ import { Play } from "lucide-react";
 import Image from "next/image";
 
 const imagePath = process.env.IMAGE_PATH;
-const ImageContainer = ({ image, height, width, video, selectedVideo, recentVideo }) => {
+const ImageContainer = ({ image, height, width, video, selectedVideo, recentVideo, priority }) => {
     return (
         <div
             className="w-full  relative overflow-hidden group">
@@ -13,6 +13,7 @@ const ImageContainer = ({ image, height, width, video, selectedVideo, recentVide
                 width={width ? width : 1000}
                 height={height}
                 style={{ width: width ? width : "100%", height }}
+                priority={priority ? priority : false}
             />
             {
                 video && (
